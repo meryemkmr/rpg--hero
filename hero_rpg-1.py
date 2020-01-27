@@ -2,6 +2,7 @@ class Character:
     def __init__(self, health, power):
         self.health = health
         self.power = power
+        self.character_name = ''
 
     def alive(self):
         if self.health > 0:
@@ -40,6 +41,7 @@ class Zombie(Character):
     def __init__(self, health, power):
         self.character_name = 'zombie'
         super(Zombie, self).__init__(health, power)
+
 hero = Hero(10,5)
 goblin = Goblin(6,2)
 zombi = Zombie(10,6)
